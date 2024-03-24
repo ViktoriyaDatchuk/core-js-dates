@@ -156,11 +156,11 @@ function isDateInPeriod(date, period) {
 function formatDate(date) {
   const enterValue = new Date(date);
   const day = enterValue.getUTCDate();
-  const month = enterValue.getMonth() + 1;
+  const month = enterValue.getUTCMonth() + 1;
   const year = enterValue.getFullYear();
   let hours = enterValue.getUTCHours();
-  const minutes = enterValue.getMinutes();
-  const seconds = enterValue.getSeconds();
+  const minutes = enterValue.getUTCMinutes();
+  const seconds = enterValue.getUTCSeconds();
   let a;
   if (hours < 12) {
     a = 'AM';
