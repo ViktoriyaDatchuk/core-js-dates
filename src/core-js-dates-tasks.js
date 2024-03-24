@@ -307,7 +307,7 @@ function getWorkSchedule(period, countWorkDays, countOffDays) {
     for (let i = 1; i <= countWorkDays; i += 1) {
       workDay = new Date(year, month, day);
       if (workDay <= end) {
-        result.push(workDay.toLocaleDateString().split('.').join('-'));
+        result.push(workDay.toLocaleDateString('ru-RU').split('.').join('-'));
       }
       day += 1;
     }
